@@ -1,6 +1,19 @@
 # mpx-test-utils
 Mpx框架单元测试工具函数库，项目集成封装了写单测过程中常用到的方法，来方便开发者更便捷的写单测
 
+## 相关文档
+该方法库的封装逻辑是在miniprogram-simulate所提供的方法之上
+
+### jest
+首先我们看下 jest 对象相关api的文档，当我们想要控制jest的某些流程和特性的时候，例如使用 jest.spyOn，jest.useFakeTimers，jest.mock 等进行模块，函数或者是setTimeout的模拟时，都需要调用jest对象的方法，那这里对应的文档为:
+https://jestjs.io/zh-Hans/docs/27.4/jest-object
+
+### miniprogram-simulate
+
+因为我们是小程序组件单元测试，所以当我们需要对 miniprogram-simulate 创建生成的小程序组件实例进行属性读取或者是方法操作时，可以查看小程序组件相关api文档：
+https://github.com/wechat-miniprogram/miniprogram-simulate/blob/master/docs/api.md
+
+
 ## 使用
 ```js
 import * as testUtils from '@mpxjs/test-utils'
