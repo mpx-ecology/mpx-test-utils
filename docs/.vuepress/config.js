@@ -37,6 +37,7 @@ const sidebar = {
 
 
 module.exports = {
+    base: '/mpx-ecology/',
     title: 'Mpx框架单元测试',
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],

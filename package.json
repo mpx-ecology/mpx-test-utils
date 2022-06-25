@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vuepress dev docs --no-cache"
+    "docs:dev": "vuepress dev docs --no-cache",
+    "docs:build": "vuepress build docs"
   },
   "repository": {
     "type": "git",
