@@ -37,7 +37,7 @@ const sidebar = {
 
 
 module.exports = {
-    base: '/mpx-ecology/',
+    base: '/mpx-test-utils/',
     title: 'Mpx框架单元测试',
     head: [
         ['link', {rel: 'icon', href: '/favicon.ico'}],
@@ -51,16 +51,6 @@ module.exports = {
         editLinks: true,
         docsBranch: 'dev',
         sidebar
-        // sidebar: [
-        //   '/',
-        //   '/installation/',
-        //   '/guides/',
-        //   '/api/',
-        //   '/api/wrapper/',
-        //   '/api/wrapper-array/',
-        //   '/api/options',
-        //   '/api/components/'
-        // ]
     },
     extendMarkdown: md => {
         // use more markdown-it plugins!
