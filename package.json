@@ -4,7 +4,8 @@
   "description": "Component Test Utils for Mpx",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "vuepress dev docs --no-cache"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,11 @@
     "url": "https://github.com/mpx-ecology/mpx-test-utils/issues"
   },
   "dependencies": {
-    "json5": "^2.1.1"
+    "@vuepress/plugin-pwa": "^1.9.7",
+    "@vuepress/theme-vue": "^1.9.7",
+    "json5": "^2.1.1",
+    "markdown-it-include": "^2.0.0",
+    "vuepress": "^1.9.7"
   },
   "peerDependencies": {
     "@mpxjs/miniprogram-simulate": "^1.4.8-beta.2",
