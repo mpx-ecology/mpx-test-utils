@@ -97,7 +97,7 @@ export function mockComponents (components) {
  * @param {mock数据文件路径} mockFilePath
  */
 const proxyMap = {}
-export function proxyFetch (mockUrl, mockUrlData, repalce = false) {
+export function proxyFetch (mockUrl, mockUrlData, replace = false) {
     let mockData
     if (typeof mockUrlData === 'string') {
         mockData = getMockContent(mockUrlData)
@@ -113,7 +113,7 @@ export function proxyFetch (mockUrl, mockUrlData, repalce = false) {
                     resData = proxyMap[item]
                 }
             })
-            if (repalce) {
+            if (replace) {
                 resolve(resData)
             } else {
                 resolve({
@@ -131,4 +131,41 @@ export function sleep(time) {
             resolve()
         }, time)
     })
+}
+
+/**
+ * 是否包含某个属性
+ * @param comp
+ * @param attr
+ * @returns {boolean}
+ */
+export function hasAttr(comp, attr) {
+    const vt = comp._vt
+    if (!vt) return false
+    vt.attrs.forEach(item => {
+        if (item.name === attr) {
+            return item
+        }
+    })
+    for (const key in vt.event) {
+        if (vt.event[key].name === attr) {
+            return vt.event[key]
+        }
+    }
+    return false
+}
+
+/**
+ * 获取属性(tagName、attrs、event等)
+ * @param comp
+ * @returns {{tagName: string, event: Event | string, attrs: *}}
+ */
+export function getAttrs(comp) {
+    const vt = comp._vt
+    if (!vt) return
+    return {
+        tagName: vt.tagName,
+        attrs: vt.attrs,
+        event: vt.event
+    }
 }
