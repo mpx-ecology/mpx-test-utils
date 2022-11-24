@@ -7,6 +7,7 @@
 此外单测环境下运行组件和我们项目正常在小程序中运行中的最大区别，就是组件的各种状态需要进行手动初始化或mock，此外组件
 的数据响应以及更新逻辑无需你做任何操作。
 
+
 ![组件分析图](https://dpubstatic.udache.com/static/dpubimg/UXcaYUAzeYJJPAz0O1BUp.png)
 
 对于前端组件而言，我们并不需要追求每一行代码的绝对覆盖率，这里我们需要关注组件依赖的属性变化以及组件自身属性变化后
@@ -31,9 +32,7 @@
 
 import { createCompAndAttach } from '@mpx/test-utils'
 const compPath = 'src/somePack/compA.mpx'
-
 const successContent = 'some successContent'
-
 describe('CompA', () => {
     // 渲染并挂载组件，现在你便得到了这个组件实例包裹对象
     const comp = createCompAndAttach(compPath, {
