@@ -4,7 +4,7 @@ class Wrapper {
     this.comp = comp
   }
   attributes() {
-    
+    return this.comp.attributes
   }
 }
 
